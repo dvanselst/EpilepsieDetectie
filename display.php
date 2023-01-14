@@ -15,13 +15,13 @@ background-color:#1e90ff;
 table {
 border: 2px solid #333;
 }
-.table_cells_odd {
-background-color:#778899;
+.table_cells_geen_aanval {
+background-color:#87cefa;
 padding-right: 20px;
 text-align:right;
 }
-.table_cells_even {
-background-color:#87cefa;
+.table_cells_wel_aanval {
+background-color:#b22222;
 padding-right: 20px;
 text-align:right;
 }
@@ -47,15 +47,16 @@ $result = mysqli_query($con,'SELECT * FROM data ORDER BY id DESC');
 $oddrow = true;
 while($row = mysqli_fetch_array($result))
 {
-if ($oddrow)
-{
-$css_class=' class="table_cells_odd"';
-}
-else
-{
-$css_class=' class="table_cells_even"';
-}
-$oddrow = !$oddrow;
+    if ($row['Aanval'] == 1)
+    {
+    $css_class=' class="table_cells_wel_aanval"';
+    }
+    else
+    {
+    $css_class=' class="table_cells_geen_aanval"';
+    }
+    
+
 echo "<tr>";
 echo "<td '.$css_class.'>" . $row['id'] . "</td>";
 echo "<td '.$css_class.'>" . $row['event'] . "</td>";
