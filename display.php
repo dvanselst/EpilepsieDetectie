@@ -62,7 +62,12 @@ echo "<td '.$css_class.'>" . $row['event'] . "</td>";
 echo "<td '.$css_class.'>" . $row['temperature'] . "</td>";
 echo "<td '.$css_class.'>" . $row['humidity'] . "</td>";
 echo "<td '.$css_class.'>" . $row['heat_index'] . "</td>";
-echo "<td '.$css_class.'>" . $row['Aanval'] . "</td>";
+if ($row['Aanval'] == 1)
+    echo "<td '.$css_class.'>" . 'Ja' . "</td>";
+else 
+    echo "<td '.$css_class.'>" . 'Nee' . "</td>";
+
+
 echo "</tr>";
 }
 
