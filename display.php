@@ -38,6 +38,7 @@ body { font-family: "Trebuchet MS", Courier; }
 <td class="table_titles">Temperatuur</td>
 <td class="table_titles">Luchtvochtigheid</td>
 <td class="table_titles">Hitte index</td>
+<td class="table_titles">Aanval</td>
 
 </tr>
 <?php
@@ -61,6 +62,7 @@ echo "<td '.$css_class.'>" . $row['event'] . "</td>";
 echo "<td '.$css_class.'>" . $row['temperature'] . "</td>";
 echo "<td '.$css_class.'>" . $row['humidity'] . "</td>";
 echo "<td '.$css_class.'>" . $row['heat_index'] . "</td>";
+echo "<td '.$css_class.'>" . $row['Aanval'] . "</td>";
 echo "</tr>";
 }
 
